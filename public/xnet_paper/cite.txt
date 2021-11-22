@@ -1,0 +1,1 @@
+K. Qi et al., “X-Net: Brain Stroke Lesion Segmentation Based on Depthwise Separable Convolution and Long-Range Dependencies”, in Medical Image Computing and Computer Assisted Intervention -- MICCAI 2019, 2019, bll 247–255.

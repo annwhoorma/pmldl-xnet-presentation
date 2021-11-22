@@ -1,0 +1,24 @@
+{
+  "name": "pmldl_flipped_classes_xnet",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "Anna Boronina",
+  "license": "MIT",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.22.4",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "^0.19.1",
+    "@slidev/types": "workspace:*",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.14.1"
+  },
+  "repository": "https://github.com/annwhoorma/pmldl-xnet-presentation.git"
+}
