@@ -319,6 +319,38 @@ Separable Convolution can enhance efficiency without significantly reducing effe
 
 ---
 
+# A bit more information
+
+<div class="row">
+<div>
+
+**Optimizer**: Adam, lr=0.001
+
+**Loss Function**: Dice + Cross Entropy losses
+
+**Batch Size**: 8
+
+</div>
+<img src="/arch/github_code_qr.png" />
+</div>
+
+<style>
+    h1 + p {
+        opacity: 1;
+    }
+    img {
+        width: 15%;
+        margin-left: 5em;
+    }
+    .row {
+        margin-top: 2em;
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+---
+
 
 # Benchmark - ATLAS dataset
 
@@ -408,3 +440,22 @@ Separable Convolution can enhance efficiency without significantly reducing effe
 </style>
 
 ---
+
+# The authors' results
+
+<div>
+
+| **Method**        | **IoU**       | **\# parameters** |
+| -------------     | --------      | ------------- |
+| 2D Dense-UNet     | 0.35          | 50.0M         |
+| U-Net             | 0.34          | 34.5M         |
+| SegNet            | 0.35          | 29.5M         |
+| **X-Net**         | **0.37**      | **15.1M**     |
+
+</div>
+
+<style>
+    div {
+        padding-top: 5em;
+    }
+</style>
