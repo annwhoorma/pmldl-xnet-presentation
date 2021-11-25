@@ -275,6 +275,8 @@ Separable Convolution can enhance efficiency and decrease overfitting without si
 
 # Encoder. FSM
 
+**Z** = relationship feature + original feature
+
 <div class="column">
     <img src="/arch/fsm2.png" class="figure">
     <img src="/arch/Z_formula.png" class="formula">
@@ -293,7 +295,10 @@ Separable Convolution can enhance efficiency and decrease overfitting without si
         width: 70%;
     }
     .formula {
-        width: 50%
+        width: 45%
+    }
+    h1 + p {
+        opacity: 1;
     }
 </style>
 
@@ -486,5 +491,25 @@ Separable Convolution can enhance efficiency and decrease overfitting without si
 <style>
     div {
         padding-top: 5em;
+    }
+</style>
+
+---
+
+# Small conclusion
+
+- reduce number of parameters
+    - **separable convolution**
+    - **basic upsampling**
+- Feature Similarity Module (**FSM**) to capture long-range dependencies
+- **skip-and-concat** to solve vanishing gradient problem and overfitting
+
+<img src="/arch/architecture.png"/>
+
+<style>
+    img {
+        width: 50%;
+        margin-top: 1em;
+        margin-left: 1em;
     }
 </style>
