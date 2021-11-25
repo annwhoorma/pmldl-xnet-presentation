@@ -140,13 +140,42 @@ Anna Boronina
 
 ---
 
+# Benchmark - ATLAS Dataset
+
+**Recall**: How many relevant items are retrieved?
+
+<div class="row">
+    <img src="/benchmark/chart_recall.png" class="paper" />
+    <img src="/benchmark/qr.png" class="paper_qr" />
+</div>
+
+<style>
+    .row {
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .paper {
+        width: 75%;
+        margin-right: 1em;
+    }
+    .paper_qr {
+        width: 15%;
+        border-radius: 5px;
+        margin-top: -3em;
+    }
+</style>
+
+---
+
 # Solution proposed by Qi *et. al*
 
 - reduce number of parameters
     - **separable convolution**
         - it is efficient
-        - gives better segmentation results 
-    - **basic upsampling** instead of unpooling
+        - gives better segmentation results
+    - **basic upsampling**
 - Feature Similarity Module (**FSM**) to capture long-range dependencies
 - **skip-and-concat** to solve vanishing gradient problem and overfitting
 
@@ -166,7 +195,7 @@ Anna Boronina
 ---
 
 
-# Architecture. Encoder. XBlock
+# Encoder. XBlock
 
 
 <img src="/arch/xblock.png"/>
@@ -179,8 +208,45 @@ Anna Boronina
 
 ---
 
+# Encoder. X-Block. Separable Convolution
 
-# Architecture. Encoder. FSM
+Separating a 3x3 kernel spatially
+
+<img src="/arch/separable_convolution.png"/>
+
+<style>
+    img {
+        margin-top: 5em;
+        margin-left: 4em;
+        width: 80%
+    }
+    h1 + p {
+        opacity: 1;
+    }
+</style>
+
+---
+
+# Encoder. X-Block. Separable Convolution
+
+Separable Convolution can enhance efficiency and decrease overfitting without significantly reducing effectiveness
+
+<img src="/arch/apply_sconv.png">
+
+<style>
+    img {
+        margin-top: 2em;
+        margin-left: 5.5em;
+        width: 75%;
+    }
+    h1 + p {
+        opacity: 1;
+    }
+</style>
+
+---
+
+# Encoder. FSM
 
 <img src="/arch/fsm.png"/>
 
@@ -193,7 +259,7 @@ Anna Boronina
 
 ---
 
-# Architecture. Encoder. FSM
+# Encoder. FSM
 
 <img src="/arch/fsm2.png">
 
@@ -207,7 +273,7 @@ Anna Boronina
 
 ---
 
-# Architecture. Encoder. FSM
+# Encoder. FSM
 
 <div class="column">
     <img src="/arch/fsm2.png" class="figure">
@@ -233,7 +299,7 @@ Anna Boronina
 
 ---
 
-# Architecture. Encoder. FSM
+# Encoder. FSM
 
 1. FSM is a non-local operation for capturing long-range dependencies by learning a relationship between any two positions of a feature map
 2. FSM has a reduced number of training parameters (thanks to separable convolution)
@@ -254,43 +320,6 @@ Anna Boronina
 
 ---
 
-# Architecture. Encoder. FSM. Separable Convolution
-
-Separating a 3x3 kernel spatially
-
-<img src="/arch/separable_convolution.png"/>
-
-<style>
-    img {
-        margin-top: 5em;
-        margin-left: 4em;
-        width: 80%
-    }
-    h1 + p {
-        opacity: 1;
-    }
-</style>
-
----
-
-# Architecture. Encoder. FSM. Separable Convolution
-
-Separable Convolution can enhance efficiency without significantly reducing effectiveness
-
-<img src="/arch/apply_sconv.png">
-
-<style>
-    img {
-        margin-top: 2em;
-        margin-left: 5.5em;
-        width: 75%;
-    }
-    h1 + p {
-        opacity: 1;
-    }
-</style>
-
----
 
 # Architecture. Decoder
 
